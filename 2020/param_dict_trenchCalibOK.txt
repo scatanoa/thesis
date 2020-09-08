@@ -1,0 +1,54 @@
+RAIN
+N 6
+M 2
+p .15
+two2theEXPth_FieldSmoothing 0
+daysAverBetweenEvents 2
+dT_days 15
+flagR0var 1
+rainPars 1,2000,.5
+
+DRAINAGE_NETWORK_TOPOLOGY
+A_hs 1e7
+elong_ratio .7
+Omega 3
+
+FLUME:
+which_flume 1
+dt_flume 10
+dx_flume .5
+L_flume 9
+Sof 2e-2
+Wflume 1
+dt_dQ_coarse_flume 3600
+
+
+SUPPLY
+hgy 2.5,300,13,8,1,3,100
+geotech .3,.58,1
+geotech2 4,.84,1e-3,7,7,1
+weath_coefPerD 2.4,2.3,2.2,2.1,2
+weath_xrefPerD .1,.1,.1,.1,.1
+
+gsd 5e-2,8e-3,17e-3
+
+FLUVIAL_MORPHODYNAMICS
+fluv_subbasin .3,1.0,2.0
+print_range 240,245,1,18
+prt_rg_ddt 1,15,1,2
+plot_series 1
+caseNum 0
+flags 1,0,1,1,0,1,1,1,1
+temp_resol 86400,2e4,40,10
+fluv_basin 9,.2,.1
+fluv_wv_A 15,.38
+fluv_wc_A 1.8,.42,7.6,.2
+fluv_rock_S_A .08,-.3
+fluv_geom 30,1,.03,2e-3,4,12
+fluv_hc_powlaws .101,-.344,4.63,.0667,1.443,43.78,.6,.8214,-.2435
+fluv_qs_powlaw 14,2.5,4
+fluv_wlogist 2.3e4,4.1,8.9,.38,.54,.08
+fluv_wqsy 2.7,.5,.85,.84,1,.5
+calib .9
+calibv 1.1
+fluv_gtm 50,2,.1,.5,5,.01,2
